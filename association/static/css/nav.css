@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    position: fixed;
+    width: 100%;
+    background: white;
+    z-index:1000;
+}
+
+header .logo {
+    margin: 0;
+    z-index: 1;
+}
+
+header img {
+    mix-blend-mode: color-burn;
+}
+
+
+header .logo a {
+    display: inline-block;
+}
+
+header .fa-bars {
+    font-size: 30px;
+    margin: 0.5cm;
+    color: black;
+    cursor: pointer;
+    display: none;
+}
+
+header .desktop {
+    display: flex;
+    gap: 20px;
+    margin-right: 10px;
+}
+
+header .desktop ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+header .desktop li {
+    margin: 0;
+}
+
+.desktop ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    transition: color 0.3s, background-color 0.5s, letter-spacing 0.5s, padding 0.5s;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.desktop ul li a:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    letter-spacing: 3px;
+    padding: 10px 25px;
+}
+
+.mobile-menu {
+    margin-left: 0;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    header {
+        background-color: #fff;
+        padding: 0;
+    }
+
+    header .logo {
+        margin: auto 25px;
+        z-index: 0;
+    }
+
+    .desktop {
+        position: fixed;
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(7px);
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: -100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.3s ease;
+    }
+
+    .desktop.mobile-menu {
+        left: 0;
+    }
+
+    .desktop ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .desktop ul li {
+        margin: 25px 0;
+        font-size: 1.2rem;
+        font-family: sans-serif, 'Gill Sans';
+        font-style: oblique;
+    }
+
+    header .fa-bars {
+        display: block;
+        z-index: 1;
+    }
+}
+
+ 

@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .contact-card {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 25px 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: auto 60px;
+            margin-bottom: 25px;
+        }
+        .contacting{
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        .contact-card h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+            color: #333;
+            margin-bottom: 15px;
+            width: 100%;
+            background-color: #ccc;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .contact-card p {
+            color: #444444;
+            font-size: 22px;
+            max-width: 75%;
+            margin: 0 auto;
+        }
+        @media screen and (max-width:768px){
+            
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .contact-card {
+                padding: 25px 10px;
+                margin: 10px 15px;
+            }
+            .contact-card h1 {
+                font-size: 24px;
+                width: auto;
+            }
+            .contact-card p {
+            font-size: 18px;
+            max-width: auto;
+            margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    {% block content %}
+
+    {% for item in Contact %}
+    <div class="contact-card">
+        <div class="contacting">
+            <h1>Nom et Prénom : </h1>
+            <p>{{item.name}}</p>
+        </div>
+        <div class="contacting">
+            <h1>Téléphone : </h1>
+            <p>{{item.email}}</p>
+        </div>
+        <div class="contacting">
+            <h1>Contenu : </h1>
+            <p>{{item.content}}</p>
+        </div>
+        
+        
+    </div>
+    {% endfor %}
+{% endblock content %}      
+</body>
+</html>
+

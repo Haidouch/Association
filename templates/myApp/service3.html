@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+        {% for service in Service %}
+            {% if service.services.titre == "Consultation maladies rénales" %}
+                {% if service.num|divisibleby:2 %}
+                    <div class="activities">
+                        <div class="container">
+                            <div class="activitie">
+                                <div class="description">
+                                    <div class="explain">
+                                        <h1>{{ service.titre }}</h1>
+                                        <p>{{ service.description }}</p>
+                                    </div>
+                                </div>
+                                <div class="photo">
+                                    <div class="image"><img src="{{ service.images.url }}" alt="{{ service.titre }}" width="300px" height="222px"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="activities" id="white">
+                        <div class="container">
+                            <div class="activitie">
+                                <div class="photo">
+                                    <div class="image"><img src="{{ service.images.url }}" alt="{{ service.titre }}" width="300px" height="222px"></div>
+                                </div>
+                                <div class="description">
+                                    <div class="explain">
+                                        <h1>{{ service.titre }}</h1>
+                                        <p>{{ service.description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+{% endblock content %}
+

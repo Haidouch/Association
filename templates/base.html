@@ -1,0 +1,89 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Association AL-AMAL</title>
+    <link rel="stylesheet" href="{% static 'css\body.css' %}">
+    <link rel="stylesheet" href="{% static 'css\nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css\footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css\icons\css\all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css\contact.css' %}">
+    <link rel="stylesheet" href="{% static 'css\table.css' %}">
+    <link rel="stylesheet" href="{% static 'css\service.css' %}">
+    <style>
+        #serlinks{
+            font-family: sans-serif, 'Gill Sans';
+            font-size: 1.2rem;
+
+        }
+            /* Common styles for all screen sizes */
+    #serlinks {
+        display: none;
+        background-color: rgb(170, 215, 255);
+        margin-top: 10px;
+    }
+    #serlinks a {
+        color: rgb(255, 255, 255);
+        letter-spacing: 3px;
+        padding: 10px 5px;
+        margin-bottom: 15px;
+    }
+    #serlinks a:hover {
+        color: rgb(170, 215, 255);
+        background-color: rgb(255, 255, 255);
+        letter-spacing: 3px;
+        padding: 10px 5px;
+        border-radius: 0;
+    }
+    #serlinks div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Media query for smaller screens */
+    @media (max-width: 768px) {
+        #serlinks {
+            margin-top: 5px;
+        }
+        #serlinks a {
+            padding: 5px 3px;
+        }
+        #serlinks a:hover {
+            padding: 5px 3px;
+        }
+        #serlinks div {
+            display: block;
+            margin-bottom: 20px;
+        }   
+    }
+    </style>
+</head> 
+<body>
+{% include 'parts/navbar.html' %}
+{% block content %}
+{% endblock content %}
+{% include 'parts/footer.html' %}
+<script src="{% static 'js\navbar.js' %}"></script>
+<script src="{% static 'js\body.js' %}"></script>
+<script>
+    
+       // Get the "Services" element and its associated links
+const servicesElement = document.getElementById("ser");
+const servicesLinks = document.getElementById("serlinks");
+function tous() {
+    const tous = document.getElementById("tous");
+    if (tous.checked) {
+        servicesLinks.style.display = "flex";
+        servicesLinks.style.flexDirection = "column";
+        servicesLinks.style.position = "absolute";
+    } else {
+        servicesLinks.style.display = "none";
+    }
+}
+
+
+</script>
+</body>
+</html>
+

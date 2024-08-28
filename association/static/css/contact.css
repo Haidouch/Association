@@ -1,0 +1,128 @@
+form{
+    margin: 0 auto;
+}
+.title{
+    padding: 30px 0;
+    font-size: 26px;
+    font-family: sans-serif;
+}
+
+.contact {
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3), rgba(0, 0, 0 , 50%)), url("/static/img/img13.jpg") no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.contact {
+    margin: 2px 0;
+    text-align: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.61);
+}
+
+.information,
+.msg {
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.msg {
+    background-color: rgba(255, 255, 255, 0.349);
+    display: flex;
+    margin: 10px 5px;
+}
+
+.msg div {
+    margin: 5px auto;
+}
+
+.msg div label {
+    display: block;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.msg div input,
+.msg div textarea {
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 8px;
+    border: none;
+    height: 0.75cm;
+    width: 7cm;
+    margin: 10px 0;
+    outline-color: white;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+.msg div textarea {
+    height: 3cm;
+}
+
+.msg div input[type="submit"] {
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 2px;
+    width: auto;
+    padding: 5px 10px;
+    transition: 0.5s;
+    margin-right: auto;
+}
+
+.msg div input[type="submit"]:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 10);
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 5px 14px;
+}
+
+.contact .information .icon {
+    font-size: 30px;
+    margin: 10px auto;
+    color: lime;
+    font-family: monospace;
+}
+
+.icon i {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 30px;
+    color: lime;
+}
+
+.location,
+.phone {
+    font-family: system-ui;
+    font-size: 21px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+.divvv{
+    display: flex;
+}
+@media screen and (max-width: 768px) {
+    .contact{
+        display: block;
+        text-align: center;
+        margin: 0;
+    }
+    section{
+        text-align: center;
+    }
+    .information,
+    .msg {
+        width: auto;
+        display: block;
+    }
+    .msg textarea{
+        height: 3cm;
+    }
+.divvv{
+    display: block;
+}
+}

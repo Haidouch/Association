@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+    
+{% block content %}
+
+
+
+<section style="display: block; padding-top: 30px;" class="contacte">
+    <div>
+        <div class="contact">
+            <div class="title" style="color: #fff;"><h1>CONTACTEZ-NOUS</h1></div>
+            <div class="divvv">
+                <div class="information">
+                    <div class="icon">
+                        <i aria-hidden="true" class="fas fa-location-arrow"></i>
+                        <h3 style="display: inline-block;">Localisation</h3>
+                    </div>
+                    <div class="location">
+                        <p>Hopital Lalla Hasnaa, Youssoufia</p>
+                    </div>
+                    <div class="icon">
+                        <i aria-hidden="true" class="far fa-address-book"></i>
+                        <h3 style="display: inline-block;">Contacte</h3>
+                    </div>
+                    <div class="phone">
+                        <p>06 54 46 89 02</p>
+                        <p>06 54 46 89 02</p>
+                    </div>
+                </div>
+                <div class="msg">
+                    <form method="post" action="{% url 'home' %}">
+                        {% csrf_token %}
+                        <div><label for="name">Name</label><input type="text" name="name" id="name"></div>
+                        <div><label for="email">E-mail</label><input type="email" name="email" id="email"></div>
+                        <div><label for="message">Message</label><textarea name="message" id="message"></textarea></div>
+                        <div><input type="submit" value="Envoyer"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div style="margin: 15px auto; text-align: center;">
+    <p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3497.8563556802046!2d-8.51350112422233!3d32.23611557389446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdaefd3982b75f09%3A0x40fa7539279df56e!2sCentre%20Hospitalier%20Provincial%20lala%20hasna!5e1!3m2!1sfr!2sma!4v1699476355915!5m2!1sfr!2sma"
+            width="50%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </p>
+</div>
+{% endblock %}

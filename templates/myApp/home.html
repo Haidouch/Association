@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+    {% block content %}
+
+<main class="about">
+    <div class="container">
+        <div class="div1">
+            <div class="div0" id="link">
+                <h1>Combattre l’insuffisance rénale</h1>
+                <p>L’insuffisance rénale est une affection dans laquelle la fonction rénale est perdue jusqu’à 85-90%, ce qui entraîne l’accumulation de déchets et d’excès de liquide dans le corps, et peut provoquer un rythme cardiaque irrégulier et une mort subite1.</p>
+                <a  class="a" href="">Read Now</a>
+            </div>
+            <div id="div"></div>
+        </div>
+        <div class="div0" style="margin-top: 20px;">
+            <h1>Qui sommes-nous?</h1>
+            <p>Nous sommes l’Association Al-Amal pour aider les patients atteints d’insuffisance rénale située dans la province de Youssoufia, dédiée au traitement de l’insuffisance rénale et au filtrage sanguin. Avec notre équipe de professionnels de la santé et nos installations à la fine pointe de la technologie, nous nous engageons à fournir des soins et un soutien exceptionnels à nos patients. Notre mission est d’améliorer la qualité de vie des personnes atteintes d’insuffisance rénale, en particulier les patients qui souffrent de pauvreté car ils n’ont pas l’argent pour se soigner de façon permanente, nous sommes donc maintenant là pour eux, nous leur offrons un traitement gratuit ou nous pouvons nous permettre la plupart des coûts du traitement, et fournir des plans de traitement personnalisés et des soins de qualité.</p>
+            <div><a  class="a" href="">More info</a></div>
+        </div>
+    </div>
+</main>
+    <main class="service">
+        <div class="container">
+            <div style="text-align: left;"><h1 class="servi">Our services</h1></div>
+            {% for x in Activitie %}
+                <div id="services">
+                    <img class="img" src="{{x.image.url}}" alt="img">
+                    <h1 style="color: black;">{{x.titre}}</h1>
+                    <p style="color: black;">{{x.concept}}</p>
+                    <div><a  class="a" href="{% url x.href %}">More info</a></div>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+    <main class="gallery">
+        <div class="container">
+            <div class="h1"><h1>Gallery</h1></div>
+            <div id="imgs4"></div>
+            <div class="imgs" id="al">
+                {% for img in Image %}
+                    <img id="nbrImages" src="{{img.img.url}}" alt="{{img.title}}">
+                {% endfor %}
+            </div>
+            
+            <div><button id="all">See all</button></div>
+            <div><button style="display: none;" id="little">See little</button></div>
+        </div>
+    </main>
+    <section style="display: block; padding-top: 30px;" class="contacte">
+        <div>
+            <div class="contact">
+        <div class="title" style="color: #fff;"><h1>CONTACTEZ-NOUS</h1></div>
+        <div class="divvv">
+                <div class="information">
+                    <div class="icon"><i aria-hidden="true" class="fas fa-location-arrow"></i><h3 style="display: inline-block;">Localisation</h3></div>
+                    <div class="location"><p>Hopital Lalla Hasnaa, Youssoufia</p></div>
+                    <div class="icon"><i aria-hidden="true" class="far fa-address-book"></i><h3 style="display: inline-block;">Contacte</h3></div>
+                    <div class="phone"><p>06 54 46 89 02</p><p>06 54 46 89 02</p></div>
+                </div>
+                <div class="msg">
+                    <form method="post" action="{% url 'home' %}">
+                        {% csrf_token %}
+                        <div><label for="name">Nom et prénom</label><input type="text" name="name" id="name"></div>
+                        <div><label for="email">Téléphone</label><input type="text" name="email" id="email"></div>
+                        <div><label for="message">Message</label><textarea name="message" id="message"></textarea></div>
+                        <div><input type="submit" value="Envoyer"></div>
+                    </form>
+                </div>
+        </div>
+               
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}
+
+

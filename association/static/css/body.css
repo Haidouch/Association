@@ -1,0 +1,257 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    margin: 0 auto;
+    padding: 0;
+    color: black;
+    background-size: cover;
+    background-attachment:fixed;
+    padding-top: 25px;
+}
+.about{
+    background-size: cover;
+    padding-top: 2.5%;
+    background-color: #edf3f39c;
+}
+.container a{
+    box-shadow: 0 0 8px rgba(134, 61, 156, 0.801);
+    width: 100%;
+}
+main .div1{
+    height: auto;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: row;
+}
+main .div0{
+    height: auto;
+    padding: 30px 60px;
+    letter-spacing: 1.5px;
+    line-height: 30px;
+}
+#div, #link{
+    background: white;
+    width: 50%;
+    display: inline-block;
+}
+#div{
+    background: #ffffff00;
+}
+#div img{
+    width: 100%;
+    height: 100%;
+}
+main .div0 h1{
+    margin: 10px auto;
+    font-size: 36px;
+    font-family: 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 45px;
+}
+main .servi{
+    margin: 0 60px;
+    font-size: 36px;
+    font-family: 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.about .div0 p{
+    width: 90%;
+    margin: 20px 0;
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+.about .div0 a{
+    padding: 13px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    color: #fff;
+    background-color: #ff6a2f;
+    transition: color 0.4s, background-color 0.5s, letter-spacing 0.5s, padding 0.5s;
+}
+.about .div0 a:hover{
+    padding: 14px;
+    color: #ff6a2f;
+    background-color: #fff;
+}
+.about .div0 div{
+    text-align: right;
+}
+.about .div0 div a{
+    padding: 13px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    color: #fff;
+    background-color: #ff6a2f;
+    transition: color 0.4s, background-color 0.5s, letter-spacing 0.5s, padding 0.5s;
+}
+.about .div0 div a:hover{
+    padding: 14px;
+    color: #ff6a2f;
+    background-color: #fff;
+}
+.service{
+    text-align: center;
+    background-color: white;
+}
+#services{
+    text-align: left;
+    display: inline-block;
+    margin: 15px;
+    letter-spacing: 1px;    
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+} 
+#services img{
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+}
+#services h1{
+    font-size: 23px;
+    margin-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#services p{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+#services div{
+    text-align: end;
+}
+#services a{
+    padding: 13px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    color: #fff;
+    background-color: #ff6a2f;
+    transition: color 0.4s, background-color 0.5s, letter-spacing 0.5s, padding 0.5s;
+}
+#services a:hover{
+    padding: 14px;
+    color: #ff6a2f;
+    background-color: #fff;
+}
+.gallery{
+    text-align: center;
+    padding-bottom: 20px;
+    background-color: #edf3f39c;
+}
+.gallery .h1{
+    margin: 20px 60px;
+    font-size: 21px;
+    font-family: 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
+}
+.gallery img{
+    width: 350px;
+    height: 250px;
+    margin: 20px 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.26);
+}
+
+.gallery button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 25px;
+    background-color: #b1226c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.5s, letter-spacing 0.5s, padding 0.5s;
+    
+}
+
+.gallery button:hover {
+    background-color: rgb(98, 0, 155);
+    padding: 11px 27px;
+}
+
+@media (min-width: 1200px) {
+    .container ,#contact{
+        width: 1170px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 900px) {
+    .container{
+        width: 100%;
+        padding: 0;
+        padding-top: 15%;
+    }
+    main .div0{
+        line-height: 45px;
+    }
+    main .div0 p{
+        width: 100%;
+        margin: 15px 0;
+        line-height: 30px;
+    }
+
+    main .div1{
+        padding: 0;
+        display: block;
+    }
+    
+    main .div1 img{
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+    main .div0{
+        padding: 10px 20px;
+    }
+    #div{
+        height: 200px;
+    }
+    #div img{
+        width: 100%;
+        height: 225px;
+    }
+    #div, #link{
+        width: 100%;
+        display: block;
+    } 
+    #services img{
+        width: 220px;
+        height: 130px;
+    }
+    #services h1{
+        width: 220px;
+        margin: 7px auto;
+    }
+    #services p{
+        width: 220px;
+        margin: auto;
+        font-size: 16px;
+        padding-bottom: 30px;
+    }
+    #services a{
+        margin: 30px auto;
+        padding: 10px;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    .gallery .imgs img, #imgs4 img{
+        width: 140px;
+        height: 90px;
+    }
+}
+
+

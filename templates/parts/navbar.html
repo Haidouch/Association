@@ -1,0 +1,29 @@
+
+{% load static %}
+    <header>
+        <div class="logo"><a href="{% url 'home' %}"><img style="mix-blend-mode: color;" width="180px" height="50px" src="{% static 'img/logoFR1.png' %}" alt=""></a></div>
+        <nav class="desktop">
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><label><a id="ser" for="tous"><input type="checkbox" id="tous" onclick="tous()" style="display: none;">Services</a></label>
+
+                    <!-- The links that will be displayed when hovering over "Services" -->
+                    <div id="serlinks" style="backdrop-filter: blur(4px);">
+                        <div>
+                            <a href="{% url 'service1' %}">SoutienPsychologique</a>
+                            <a href="{% url 'service2' %}">PlansDeTraitement</a>
+                            <a href="{% url 'service3' %}">Consultation</a>
+                            <a href="{% url 'service4' %}" style="margin-bottom: 0;">ConseilsNutritionnels</a>
+                        </div>
+                      
+                    </div>
+                </li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+        <i class="fa fa-bars" id="nav"></i>
+    </header>
+
+    
+

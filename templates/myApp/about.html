@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% load static %}
+    {% block content %}
+    <div class="humain" >
+        <h1 style="color: black;margin-top:10%;">Les ressources humaines au centre</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Qualité des ressources humaines</th>
+                    <th>Ressources de la Délégation à la santé</th>
+                    <th>Ressources de la Société</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for x in Ressources %}
+                    <tr>
+                        <td><p>{{x.name}}</p></td>
+                        <td>{{x.ressourcesdelegation}}</td>
+                        <td>{{x.ressourcessocial}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+
+    <div class="humain">
+        <h1 style="color: black;">Le budget de l'association pour l'année 2021</h1>
+        <div class="budget">
+            <h1 style="color: rgb(0, 0, 0);margin-left: 25px;text-align:left;padding:26px auto;">Les revenus</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Partenaire</th>
+                        <th>La valeur</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for x in Revenus %}
+                        <tr>
+                            <td><p>{{x.partenaire}}</p></td>
+                            <td>{{x.valeur}} Dhs</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+        
+            </table>
+        </div>
+        <div class="budget" style="margin-top: 20px;">
+            <h1 style="color: rgb(0, 0, 0);margin-left: 25px;text-align:left">Les dépenses</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Type de dépense</th>
+                        <th>La valeur</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for x in Depenses %}
+                        <tr>
+                            <td><p>{{x.type}}</p></td>
+                            <td>{{x.valeur}} Dhs</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+        
+            </table>
+        </div>
+    </div>
+    <div class="humain">
+        <h1 style="color: rgb(0, 0, 0);">Les dettes jusqu'à la fin de 31 May 2024</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Créancier</th>
+                    <th>Le montant</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for dettes in Dettes %}
+                    <tr>
+                        <td><p>{{dettes.creancier}}</p></td>
+                        <td>{{dettes.montant}} Dhs</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+
+    <div class="humain">
+        <table>
+            <h1 style="color: rgb(0, 0, 0);">Développementde l'activité de filtration de sanguine de 2012 à 2021</h1>
+            <thead>
+                <tr>
+                    <th>________</th>
+                    <th>Nombre de patients</th>
+                    <th>Nombre de sessions</th>
+                    <th>Nombre de machines</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in DialyseDataYear %}
+                <tr>
+                    <td>{{ data.year }}</td>
+                    <td>{{ data.nbrPatients }}</td>
+                    <td>{{ data.nbrSessions }}</td>
+                    <td>{{ data.nbrMachines }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="humain">
+        <table>
+            <h1 style="color: black;">Le cout financier patient</h1>
+            <thead>
+                <tr>
+                    <th>Année</th>
+                    <th>2018</th>
+                    <th>2019</th>
+                    <th>2020</th>
+                    <th>2021</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in CoutDePatients %}
+                <tr>
+                    <td>{{ item.column }}</td>
+                    <td>{{ item.y2018 }}</td>
+                    <td>{{ item.y2019 }}</td>
+                    <td>{{ item.y2020 }}</td>
+                    <td>{{ item.y2021 }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+    {% endblock content %}      
+
+
+
+
+
+
